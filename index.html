@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative To-Do List</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>🎯 My Task Manager</h1>
+    <button id="themeToggle">🌙</button>
+  </nav>
+
+  <!-- Layout -->
+  <div class="main-container">
+
+    <!-- Left Sidebar -->
+    <aside id="left-sidebar">
+      <h2>📌 Tasks</h2>
+      <div id="sidebarTasks"></div>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <h2>📝 To-Do List</h2>
+      <div class="todo-form">
+        <input type="text" placeholder="Task Title" id="taskTitle">
+        <textarea placeholder="Description" id="taskDesc"></textarea>
+
+        <div class="datetime-wrapper">
+          <input type="date" id="taskDueDate">
+          <input type="time" id="taskTime">
+        </div>
+
+        <select id="taskPriority">
+          <option value="low">🟢 Low</option>
+          <option value="medium">🟡 Medium</option>
+          <option value="high">🔴 High</option>
+        </select>
+
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+      <div id="taskList"></div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside id="right-sidebar">
+      <h2>✅ Completed Tasks</h2>
+      <div id="completedTasks"></div>
+    </aside>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
